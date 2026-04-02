@@ -61,7 +61,7 @@ button {
     font-size: 22px;
 }
 
-/* RESULT PAGE DEFAULT (PC/TABLET) */
+/* RESULT DEFAULT (PC/TAB) */
 #resultPage {
     display: none;
 }
@@ -72,18 +72,17 @@ button {
     object-fit: cover;
 }
 
-/* MOBILE SCROLL FIX */
+/* 🔥 MOBILE FINAL FIX */
 @media (max-width: 768px) {
     #resultPage {
         overflow-x: auto;
         overflow-y: hidden;
-        white-space: nowrap;
     }
 
     #resultPage img {
         height: 100vh;
-        width: auto;
-        display: inline-block;
+        width: 1500px; /* scroll enable */
+        object-fit: contain;
     }
 }
 </style>
