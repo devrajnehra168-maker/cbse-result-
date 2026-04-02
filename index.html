@@ -10,7 +10,7 @@ body {
     background: white;
 }
 
-/* FORM CENTER */
+/* FORM */
 .container {
     display: flex;
     justify-content: center;
@@ -61,27 +61,33 @@ button {
     font-size: 22px;
 }
 
-/* RESULT DEFAULT (PC/TAB) */
+/* RESULT */
 #resultPage {
     display: none;
 }
 
-#resultPage img {
+.image-container {
     width: 100%;
     height: 100vh;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* 🔥 MOBILE FINAL FIX */
-@media (max-width: 768px) {
-    #resultPage {
+/* 🔥 ONLY SMALL PHONES FIX */
+@media (max-width: 480px) {
+    .image-container {
         overflow-x: auto;
         overflow-y: hidden;
+        height: 100vh;
     }
 
-    #resultPage img {
+    .image-container img {
         height: 100vh;
-        width: 1500px; /* scroll enable */
+        width: 1600px; /* force scroll */
         object-fit: contain;
     }
 }
@@ -114,7 +120,9 @@ button {
 
 <!-- RESULT IMAGE -->
 <div id="resultPage">
-    <img src="result.jpg">
+    <div class="image-container">
+        <img src="result.jpg">
+    </div>
 </div>
 
 <script>
